@@ -1,0 +1,23 @@
+\begin{tikzpicture}[scale=1]
+
+%Triangle sides
+\def\a{6}
+
+
+%Marking coordiantes
+
+\coordinate [label=above:$A$] (A)at (0,\a);
+\coordinate [label=right:$B$] (B)at (\a,0);
+\coordinate [label=left:$C$]  (C)at (0,0);
+
+%Drawing triangle ABC
+\color{blue}
+\draw (A) -- node[right] {$\textrm{$\sqrt{72}$}$} (B);
+\color{black}
+\draw (B) -- node[below] {$\textrm{6}$} (C) -- node[right,,xshift=2mm] {$\textrm{6}$} (A);
+
+%Drawing and marking angles
+\tkzMarkAngle[fill=blue!40,size=0.5cm,mark=](A,B,C)
+\tkzMarkRightAngle[fill=blue!20,size=.3](A,C,B)
+\tkzLabelAngle[pos=-0.65](A,C,B){$$}
+\end{tikzpicture}

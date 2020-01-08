@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,calc,angles,positioning,intersections,quotes,decorations,babel,patterns,fit}
+\usepackage{tkz-euclide}
+\begin{document}
+\begin{tikzpicture}[scale =0.9,>=stealth,point/.style = {draw, circle, fill = black, inner sep = 1pt},]
+\draw (-1,0)circle (6cm);
+\node (C) at (10,0)[point,label=above :$C$] {};
+\node (A) at (3.5,4)[point,label=below :$A$] {};
+\node (B) at (-1,0)[point,label=below :$B$] {};
+\node (D) at (3.5,-4)[point,label=below :$D$] {};
+\node (M) at (3.5,0)[point,label=above :$\textbf{M}$] {};
+\draw (A)--(B)--node[below] {$\textbf{5cm}$}(M)--node[below] {$\textbf{5cm}$}(C)--node[below] {$\textbf{8cm}$}(D)--(B);
+\draw (A)--node[below] {$\textbf{8cm}$}(C);
+\draw (D)--(M)--(A)--(3.5,9);
+\draw (D)--(3.5,-9)	;
+\end{tikzpicture}
+\end{document}

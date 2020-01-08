@@ -1,0 +1,25 @@
+
+\begin{tikzpicture}[scale=1]
+
+%Triangle sides
+\def\a{30}
+\def\c{17.34}
+
+%Marking coordiantes
+\coordinate [label=above:$A$] (A) at (\a,\c);
+\coordinate [label=below:$B$] (B) at (\a,0);
+\coordinate [label=left:$C$] (C) at (0,0);
+
+%Drawing triangle ABC
+\color{blue}
+\draw (A) -- node[right] {$\textrm{10$\sqrt{3}$}$} (B);
+\color{black}
+\draw (B) -- node[below] {$\textrm{30}$} (C) -- node[above left,xshift=2mm] {$\textrm{$\sqrt{1200}$}$} (A);
+
+%Drawing and marking angles
+\tkzMarkAngle[fill=red!40,size=0.8cm,mark=](B,C,A)
+\tkzMarkRightAngle[fill=blue!20,size=.3](A,B,C)
+\tkzLabelAngle[pos=0.65](A,C,B)[right]{$30\degree$}
+
+\end{tikzpicture}
+

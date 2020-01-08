@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+[scale=0.5,>=stealth,point/.style={draw,circle,fill = black,inner sep=0.5pt},]
+
+%quadrilateral sides
+\def\a{4.4}
+\def\b{5.7}
+\def\c{4}
+
+%Labeling points
+\node (E) at (0,\a)[point,label=above:$E$] {};
+\node (A) at (-\c,0)[point,label=left:$A$] {};
+\node (S) at (0,-\b)[point,label=below:$S$] {};
+\node (Y) at (\c,0)[point,label=right:$Y$] {};
+\node (O) at ($(A)!0.5!(Y)$)[point,label=right:$O$] {};
+%Drawing Quadrilateral EASY
+\color{blue}
+\draw (E)--node[above] {$\textrm{6}$}(A)--node[left] {$\textrm{7}$}(S)--node[right] {$\textrm{}$}(Y)--node[right] {$\textrm{}$}(E)--node[right] {$\textrm{}$}(S)(A)--node[below left]{$\textrm{4}$}(O)--node[left]{$\textrm{}$}(Y)(O)--node[right]{$\textrm{$\sqrt{20}$}$}(E)(O)--node[right]{$\textrm{$\sqrt{33}$}$}(S);
+
+%Drawing and marking angles
+\color{black}
+\tkzMarkAngle[fill=black!40,size=0.8cm,mark=](O,A,E)
+\tkzMarkAngle[fill=black!40,size=0.8cm,mark=](S,A,O)
+\tkzMarkRightAngle[fill=blue!20,size=.3](A,O,E)
+\tkzMarkRightAngle[fill=blue!20,size=.3](Y,O,E)
+\tkzMarkRightAngle[fill=blue!20,size=.3](A,O,S)
+\tkzMarkRightAngle[fill=blue!20,size=.3](Y,O,S)
+\end{tikzpicture}

@@ -1,0 +1,53 @@
+\documentclass{beamer}
+
+\mode<presentation>
+{
+  \usetheme{boxes}      
+  \usecolortheme{default} 
+  \usefonttheme{serif} 
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+\usepackage{tikz}
+\setbeamercovered{highly dynamic}
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+\renewcommand{\thefigure}{\thesection-\arabic{figure}}
+\usetikzlibrary{shapes.geometric,calc,angles,positioning,intersections,quotes,decorations,babel,patterns,fit}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{graphics}
+\usepackage{standalone}
+\usepackage{gensymb}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\title[Your Short Title]{Assignment}
+\author{Narendra}
+\institute{IITH}
+\date{}
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+\input{./chapters/triangle_const.tex}
+\input{./chapters/triangle_median.tex}
+\input{./chapters/triangle_area.tex}
+\input{./chapters/miscellanious.tex}
+\input{./chapters/quadrilateral.tex}
+\input{./chapters/tri_rectangle.tex}
+\input{./chapters/circle_construction.tex}
+\end{document}

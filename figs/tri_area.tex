@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=1]
+
+%Triangle sides
+\def\a{6}
+\def\b{4}
+\def\c{2}
+\def\d{3}
+\def\e{5}
+%Marking coordiantes
+\color{blue}
+\coordinate [label=above:$A$] (A) at (\d,\e);
+\coordinate [label=below:$B$] (B) at (0,0);
+\coordinate [label=below:$C$] (C) at (\a,0);
+\coordinate [label=below:$D$] (D) at (\c,0);
+\coordinate [label=below:$E$] (E) at (\b,0);
+
+%Drawing triangle ABC
+\color{black}
+\draw (A) -- node[right] {$\textrm{}$} (B) -- node[below] {$\textrm{}$} (C) -- node[right,,xshift=2mm] {$\textrm{}$} (A)-- node[below] {$\textrm{}$} (E) (A)-- node[below] {$\textrm{}$} (D) ;
+\end{tikzpicture}
